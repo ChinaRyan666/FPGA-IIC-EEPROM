@@ -1,0 +1,326 @@
+
+*** Running vivado
+    with args -log top_e2prom.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_e2prom.tcl
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source top_e2prom.tcl -notrace
+Command: synth_design -top top_e2prom -part xc7z020clg400-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 5324
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1154.906 ; gain = 14.348
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_e2prom' [D:/Desktop/7020/top_e2prom/rtl/top_e2prom.v:19]
+	Parameter SLAVE_ADDR bound to: 7'b1010000 
+	Parameter BIT_CTRL bound to: 1'b1 
+	Parameter CLK_FREQ bound to: 26'b10111110101111000010000000 
+	Parameter I2C_FREQ bound to: 18'b111101000010010000 
+	Parameter L_TIME bound to: 17'b11110100001001000 
+	Parameter MAX_BYTE bound to: 16'b0000000100000000 
+INFO: [Synth 8-6157] synthesizing module 'e2prom_rw' [D:/Desktop/7020/top_e2prom/rtl/e2prom_rw.v:19]
+	Parameter WR_WAIT_TIME bound to: 14'b01001110001000 
+	Parameter MAX_BYTE bound to: 16'b0000000100000000 
+INFO: [Synth 8-226] default block is never used [D:/Desktop/7020/top_e2prom/rtl/e2prom_rw.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'e2prom_rw' (1#1) [D:/Desktop/7020/top_e2prom/rtl/e2prom_rw.v:19]
+INFO: [Synth 8-6157] synthesizing module 'i2c_dri' [D:/Desktop/7020/top_e2prom/rtl/i2c_dri.v:19]
+	Parameter SLAVE_ADDR bound to: 7'b1010000 
+	Parameter CLK_FREQ bound to: 26'b10111110101111000010000000 
+	Parameter I2C_FREQ bound to: 18'b111101000010010000 
+	Parameter st_idle bound to: 8'b00000001 
+	Parameter st_sladdr bound to: 8'b00000010 
+	Parameter st_addr16 bound to: 8'b00000100 
+	Parameter st_addr8 bound to: 8'b00001000 
+	Parameter st_data_wr bound to: 8'b00010000 
+	Parameter st_addr_rd bound to: 8'b00100000 
+	Parameter st_data_rd bound to: 8'b01000000 
+	Parameter st_stop bound to: 8'b10000000 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Desktop/7020/top_e2prom/rtl/i2c_dri.v:193]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_dri' (2#1) [D:/Desktop/7020/top_e2prom/rtl/i2c_dri.v:19]
+INFO: [Synth 8-6157] synthesizing module 'rw_result_led' [D:/Desktop/7020/top_e2prom/rtl/rw_result_led.v:19]
+	Parameter L_TIME bound to: 17'b11110100001001000 
+INFO: [Synth 8-6155] done synthesizing module 'rw_result_led' (3#1) [D:/Desktop/7020/top_e2prom/rtl/rw_result_led.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'top_e2prom' (4#1) [D:/Desktop/7020/top_e2prom/rtl/top_e2prom.v:19]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1213.609 ; gain = 73.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1213.609 ; gain = 73.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1213.609 ; gain = 73.051
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1213.609 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/Desktop/7020/top_e2prom/prj/top_e2prom.srcs/constrs_1/new/top_e2prom.xdc]
+Finished Parsing XDC File [D:/Desktop/7020/top_e2prom/prj/top_e2prom.srcs/constrs_1/new/top_e2prom.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Desktop/7020/top_e2prom/prj/top_e2prom.srcs/constrs_1/new/top_e2prom.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_e2prom_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_e2prom_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1331.449 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1331.449 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1331.449 ; gain = 190.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1331.449 ; gain = 190.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1331.449 ; gain = 190.891
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'flow_cnt_reg' in module 'e2prom_rw'
+INFO: [Synth 8-802] inferred FSM for state register 'cur_state_reg' in module 'i2c_dri'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 |                               00
+                 iSTATE2 |                               01 |                               10
+                 iSTATE0 |                               10 |                               11
+                 iSTATE1 |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'flow_cnt_reg' using encoding 'sequential' in module 'e2prom_rw'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                 st_idle |                         00000001 |                         00000001
+               st_sladdr |                         00000010 |                         00000010
+               st_addr16 |                         00000100 |                         00000100
+                st_addr8 |                         00001000 |                         00001000
+              st_data_wr |                         00010000 |                         00010000
+              st_addr_rd |                         00100000 |                         00100000
+              st_data_rd |                         01000000 |                         01000000
+                 st_stop |                         10000000 |                         10000000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'cur_state_reg' in module 'i2c_dri'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1331.449 ; gain = 190.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   17 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 1     
+	   2 Input   14 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    7 Bit       Adders := 1     
++---Registers : 
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	               14 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 4     
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	   2 Input   17 Bit        Muxes := 1     
+	   4 Input   16 Bit        Muxes := 1     
+	   2 Input   14 Bit        Muxes := 1     
+	  22 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 4     
+	   9 Input    8 Bit        Muxes := 2     
+	  31 Input    7 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 6     
+	  29 Input    7 Bit        Muxes := 1     
+	  33 Input    7 Bit        Muxes := 1     
+	  22 Input    7 Bit        Muxes := 1     
+	   6 Input    7 Bit        Muxes := 1     
+	   9 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 3     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 35    
+	   3 Input    1 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 8     
+	  31 Input    1 Bit        Muxes := 7     
+	  29 Input    1 Bit        Muxes := 7     
+	  22 Input    1 Bit        Muxes := 6     
+	   6 Input    1 Bit        Muxes := 5     
+	  33 Input    1 Bit        Muxes := 5     
+	   9 Input    1 Bit        Muxes := 13    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1331.449 ; gain = 190.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping	Report
++------------+-------------------+---------------+----------------+
+|Module Name | RTL Object        | Depth x Width | Implemented As | 
++------------+-------------------+---------------+----------------+
+|i2c_dri     | scl               | 64x1          | LUT            | 
+|i2c_dri     | scl               | 64x1          | LUT            | 
+|i2c_dri     | sda_out           | 64x1          | LUT            | 
+|top_e2prom  | u_i2c_dri/scl     | 64x1          | LUT            | 
+|top_e2prom  | u_i2c_dri/scl     | 64x1          | LUT            | 
+|top_e2prom  | u_i2c_dri/sda_out | 64x1          | LUT            | 
++------------+-------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1331.449 ; gain = 190.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1331.539 ; gain = 190.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1332.496 ; gain = 191.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1340.637 ; gain = 200.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1340.637 ; gain = 200.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1340.637 ; gain = 200.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1340.637 ; gain = 200.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1340.637 ; gain = 200.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1340.637 ; gain = 200.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |    12|
+|3     |LUT1   |     6|
+|4     |LUT2   |    61|
+|5     |LUT3   |    19|
+|6     |LUT4   |    27|
+|7     |LUT5   |    30|
+|8     |LUT6   |    65|
+|9     |FDCE   |   133|
+|10    |FDPE   |     3|
+|11    |IBUF   |     2|
+|12    |IOBUF  |     1|
+|13    |OBUF   |     2|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1340.637 ; gain = 200.078
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 1340.637 ; gain = 82.238
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1340.637 ; gain = 200.078
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1352.695 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1356.578 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instance 
+
+INFO: [Common 17-83] Releasing license: Synthesis
+29 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1356.578 ; gain = 216.020
+INFO: [Common 17-1381] The checkpoint 'D:/Desktop/7020/top_e2prom/prj/top_e2prom.runs/synth_1/top_e2prom.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_e2prom_utilization_synth.rpt -pb top_e2prom_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jun  1 15:48:00 2023...

@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Oct 21 14:45:32 2023
+# Process ID: 27192
+# Current directory: D:/Github/FPGA-IIC-EEPROM/top_e2prom/prj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent29080 D:\Github\FPGA-IIC-EEPROM\top_e2prom\prj\top_e2prom.xpr
+# Log file: D:/Github/FPGA-IIC-EEPROM/top_e2prom/prj/vivado.log
+# Journal file: D:/Github/FPGA-IIC-EEPROM/top_e2prom/prj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Github/FPGA-IIC-EEPROM/top_e2prom/prj/top_e2prom.xpr
+update_compile_order -fileset sources_1
